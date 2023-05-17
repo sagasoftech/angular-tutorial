@@ -17,3 +17,6 @@
         (click) = "onServerCreation()">Add Server</button>
 
 <p *ngIf="serverCreated"> {{ serverCreateStatus }} </p>
+<ng-template>
+    <p>Server does not exist, click Add Server</p>
+</ng-template>
