@@ -8,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class ServersComponent {
 
+  allowNewServer = false;
+
+  constructor(){
+    setTimeout(() => {
+      this.allowNewServer = true;
+    }, 2000);
+  }
 }
