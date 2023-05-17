@@ -7,6 +7,7 @@ import { ServersComponent } from './servers/servers.component';
 import { FormsModule } from '@angular/forms';
 import { Assignment1Component } from './assignment1/assignment1.component';
 import { Assignment3Component } from './assignment3/assignment3.component';
+import { DatabindingComponent } from './databinding/databinding.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { Assignment3Component } from './assignment3/assignment3.component';
     ServerComponent,
     ServersComponent,
     Assignment1Component,
-    Assignment3Component
+    Assignment3Component,
+    DatabindingComponent
   ],
   imports: [
     BrowserModule,
