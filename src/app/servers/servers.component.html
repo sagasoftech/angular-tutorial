@@ -1,10 +1,16 @@
-<h4>One-way Data Binding</h4>
+<!-- <h4>One-way Data Binding</h4> -->
+<h4>Two-way Data Binding</h4>
 <label>Server Name:</label>
-<input
+<!-- <input
     type="tex"
     class="form-control"
     (input) = "onUpdateServerName($event)"
-    >
+    > -->
+<input
+    type="tex"
+    class="form-control"
+    [(ngModel)] = "serverName"
+    >    
 <p> {{ serverName }} </p>
 <button class="btn btn-primary" 
         [disabled]="!allowNewServer"
