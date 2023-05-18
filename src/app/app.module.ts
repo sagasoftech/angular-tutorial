@@ -8,6 +8,8 @@ import { FormsModule } from '@angular/forms';
 import { Assignment1Component } from './assignment1/assignment1.component';
 import { Assignment3Component } from './assignment3/assignment3.component';
 import { DatabindingComponent } from './databinding/databinding.component';
+import { CockpitComponent } from './databinding/cockpit/cockpit.component';
+import { ServerElementComponent } from './databinding/server-element/server-element.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { DatabindingComponent } from './databinding/databinding.component';
     ServersComponent,
     Assignment1Component,
     Assignment3Component,
-    DatabindingComponent
+    DatabindingComponent,
+    CockpitComponent,
+    ServerElementComponent
   ],
   imports: [
     BrowserModule,
