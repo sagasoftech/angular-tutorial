@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./databinding.component.css']
 })
 export class DatabindingComponent {
-  serverElements = [];
+  serverElements = [{name: 'TestServer', type: 'server', content: 'This is a Test Server'}];
 
 }
