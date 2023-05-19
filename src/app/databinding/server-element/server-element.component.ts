@@ -9,4 +9,9 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
 export class ServerElementComponent {
 
   @Input('srvElement') element: {name: string, type: string, content: string}
+
+  constructor(){
+    console.log('Contructor called !')
+  }
+
 }
