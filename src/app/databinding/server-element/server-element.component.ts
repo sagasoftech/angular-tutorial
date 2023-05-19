@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-server-element',
@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class ServerElementComponent {
 
-  element: {name: string, type: string, content: string}
+  @Input() element: {name: string, type: string, content: string}
 }
