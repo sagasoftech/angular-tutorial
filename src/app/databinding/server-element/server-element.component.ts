@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class ServerElementComponent {
 
+  element: {name: string, type: string, cotent: string}
 }
