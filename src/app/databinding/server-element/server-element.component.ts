@@ -7,5 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class ServerElementComponent {
 
-  @Input() element: {name: string, type: string, content: string}
+  @Input('srvElement') element: {name: string, type: string, content: string}
 }
