@@ -4,7 +4,7 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
   selector: 'app-server-element',
   templateUrl: './server-element.component.html',
   styleUrls: ['./server-element.component.css'],
-  encapsulation: ViewEncapsulation.None // None, Native
+  encapsulation: ViewEncapsulation.Emulated // None, Native
 })
 export class ServerElementComponent {
 
