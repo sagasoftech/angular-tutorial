@@ -8,7 +8,8 @@ import {
   DoCheck,
   AfterContentInit,
   AfterContentChecked,
-  AfterViewInit} from '@angular/core';
+  AfterViewInit,
+  AfterViewChecked} from '@angular/core';
 
 @Component({
   selector: 'app-server-element',
@@ -22,7 +23,8 @@ export class ServerElementComponent implements
   DoCheck,
   AfterContentInit,
   AfterContentChecked,
-  AfterViewInit {
+  AfterViewInit,
+  AfterViewChecked {
 
   @Input('srvElement') element: {name: string, type: string, content: string}
 
@@ -53,5 +55,9 @@ export class ServerElementComponent implements
 
   ngAfterViewInit(): void {
     console.log('ngAfterViewInit called !');
+  }
+
+  ngAfterViewChecked(): void {
+    console.log('ngAfterViewChecked called !');
   }
 }
