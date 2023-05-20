@@ -10,7 +10,9 @@ import {
   AfterContentChecked,
   AfterViewInit,
   AfterViewChecked,
-  OnDestroy} from '@angular/core';
+  OnDestroy,
+  ContentChild,
+  ElementRef} from '@angular/core';
 
 @Component({
   selector: 'app-server-element',
@@ -29,6 +31,7 @@ export class ServerElementComponent implements
   OnDestroy {
 
   @Input('srvElement') element: {name: string, type: string, content: string}
+  @ContentChild('contentParagraph') paragraph: ElementRef;
 
   constructor(){
     console.log('Contructor called !');
@@ -49,6 +52,7 @@ export class ServerElementComponent implements
 
   ngAfterContentInit(): void {
     console.log('ngAfterContentInit called !');
+    console.log('Text contenet of Paragraph' + this.paragraph.nativeElement.textContent); 
   }
 
   ngAfterContentChecked(): void {
