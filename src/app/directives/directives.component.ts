@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./directives.component.css']
 })
 export class DirectivesComponent {
-
+  oddNumbers = [1, 3, 5];
+  evenNumbers = [2, 4, 6];
+  onlyOdd = false;
 }
