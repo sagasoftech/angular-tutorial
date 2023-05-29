@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
-import { FormsModule } from '@angular/forms';
 import { Assignment1Component } from './assignment1/assignment1.component';
 import { Assignment3Component } from './assignment3/assignment3.component';
 import { DatabindingComponent } from './databinding/databinding.component';
@@ -32,7 +33,14 @@ import { RoutingUserComponent } from './routing/routing-users/routing-user/routi
 import { RoutingEditServerComponent } from './routing/routing-servers/routing-edit-server/routing-edit-server.component';
 import { RoutingServerComponent } from './routing/routing-servers/routing-server/routing-server.component';
 import { RoutingServersService } from './routing/routing-servers/routing-servers.service';
+
 //import { LoggingService } from './logging.service';
+
+const appRoutes: Routes = [
+  {path: '', component: RoutingHomeComponent},
+  {path: 'users', component: RoutingUsersComponent},
+  {path: 'servers', component: RoutingServersComponent}
+]
 
 @NgModule({
   declarations: [
