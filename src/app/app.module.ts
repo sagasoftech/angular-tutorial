@@ -21,6 +21,9 @@ import { UnlessDirective } from './directives/better-highlight/unless.directive'
 import { ServicesComponent } from './services/services.component';
 import { AccountComponent } from './services/account/account.component';
 import { NewAccountComponent } from './services/new-account/new-account.component';
+import { Assignment5Component } from './assignment5/assignment5.component';
+import { InactiveUsersComponent } from './assignment5/inactive-users/inactive-users.component';
+import { ActiveUsersComponent } from './assignment5/active-users/active-users.component';
 //import { LoggingService } from './logging.service';
 
 @NgModule({
@@ -43,7 +46,10 @@ import { NewAccountComponent } from './services/new-account/new-account.componen
     UnlessDirective,
     ServicesComponent,
     AccountComponent,
-    NewAccountComponent
+    NewAccountComponent,
+    Assignment5Component,
+    InactiveUsersComponent,
+    ActiveUsersComponent
   ],
   imports: [
     BrowserModule,
