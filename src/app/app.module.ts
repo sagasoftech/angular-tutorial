@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
@@ -36,19 +35,6 @@ import { RoutingServersService } from './routing/routing-servers/routing-servers
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 //import { LoggingService } from './logging.service';
-
-const appRoutes: Routes = [
-  {path: '', component: RoutingHomeComponent},
-  {path: 'users', component: RoutingUsersComponent, children: [
-    {path: ':id/:name', component: RoutingUserComponent}
-  ]},
-  {path: 'servers', component: RoutingServersComponent, children: [
-    {path: ':id', component: RoutingServerComponent},
-    {path: ':id/edit', component: RoutingEditServerComponent}
-  ]},
-  {path: 'not-found', component: PageNotFoundComponent},
-  {path: '**', redirectTo: '/not-found'}
-]
 
 @NgModule({
   declarations: [
@@ -85,8 +71,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    RouterModule.forRoot(appRoutes)
+    FormsModule
   ],
   providers: [RoutingServersService],
   bootstrap: [AppComponent]
