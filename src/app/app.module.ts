@@ -39,6 +39,7 @@ import { RoutingServersService } from './routing/routing-servers/routing-servers
 const appRoutes: Routes = [
   {path: '', component: RoutingHomeComponent},
   {path: 'users', component: RoutingUsersComponent},
+  {path: 'users/:id', component: RoutingUserComponent},
   {path: 'servers', component: RoutingServersComponent}
 ]
 
