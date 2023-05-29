@@ -33,6 +33,7 @@ import { RoutingEditServerComponent } from './routing/routing-servers/routing-ed
 import { RoutingServerComponent } from './routing/routing-servers/routing-server/routing-server.component';
 import { RoutingServersService } from './routing/routing-servers/routing-servers.service';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AppRoutingModule } from './app-routing.module';
 
 //import { LoggingService } from './logging.service';
 
@@ -71,7 +72,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [RoutingServersService],
   bootstrap: [AppComponent]
