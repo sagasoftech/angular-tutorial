@@ -24,6 +24,14 @@ import { NewAccountComponent } from './services/new-account/new-account.componen
 import { Assignment5Component } from './assignment5/assignment5.component';
 import { InactiveUsersComponent } from './assignment5/inactive-users/inactive-users.component';
 import { ActiveUsersComponent } from './assignment5/active-users/active-users.component';
+import { RoutingComponent } from './routing/routing.component';
+import { RoutingHomeComponent } from './routing/routing-home/routing-home.component';
+import { RoutingUsersComponent } from './routing/routing-users/routing-users.component';
+import { RoutingServersComponent } from './routing/routing-servers/routing-servers.component';
+import { RoutingUserComponent } from './routing/routing-users/routing-user/routing-user.component';
+import { RoutingEditServerComponent } from './routing/routing-servers/routing-edit-server/routing-edit-server.component';
+import { RoutingServerComponent } from './routing/routing-servers/routing-server/routing-server.component';
+import { RoutingServersService } from './routing/routing-servers/routing-servers.service';
 //import { LoggingService } from './logging.service';
 
 @NgModule({
@@ -49,13 +57,20 @@ import { ActiveUsersComponent } from './assignment5/active-users/active-users.co
     NewAccountComponent,
     Assignment5Component,
     InactiveUsersComponent,
-    ActiveUsersComponent
+    ActiveUsersComponent,
+    RoutingComponent,
+    RoutingHomeComponent,
+    RoutingUsersComponent,
+    RoutingServersComponent,
+    RoutingUserComponent,
+    RoutingEditServerComponent,
+    RoutingServerComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [],//[LoggingService],
+  providers: [RoutingServersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
