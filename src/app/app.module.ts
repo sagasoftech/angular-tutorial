@@ -41,6 +41,7 @@ const appRoutes: Routes = [
   {path: 'users', component: RoutingUsersComponent},
   {path: 'users/:id/:name', component: RoutingUserComponent},
   {path: 'servers', component: RoutingServersComponent},
+  {path: 'servers/:id', component: RoutingServerComponent},
   {path: 'servers/:id/edit', component: RoutingEditServerComponent}
 ]
 
