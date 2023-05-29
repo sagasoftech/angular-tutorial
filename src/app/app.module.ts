@@ -33,6 +33,7 @@ import { RoutingUserComponent } from './routing/routing-users/routing-user/routi
 import { RoutingEditServerComponent } from './routing/routing-servers/routing-edit-server/routing-edit-server.component';
 import { RoutingServerComponent } from './routing/routing-servers/routing-server/routing-server.component';
 import { RoutingServersService } from './routing/routing-servers/routing-servers.service';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 //import { LoggingService } from './logging.service';
 
@@ -45,7 +46,8 @@ const appRoutes: Routes = [
     {path: ':id', component: RoutingServerComponent},
     {path: ':id/edit', component: RoutingEditServerComponent}
   ]},
-
+  {path: 'not-found', component: PageNotFoundComponent},
+  {path: 'something', redirectTo: '/not-found'}
 ]
 
 @NgModule({
@@ -78,7 +80,8 @@ const appRoutes: Routes = [
     RoutingServersComponent,
     RoutingUserComponent,
     RoutingEditServerComponent,
-    RoutingServerComponent
+    RoutingServerComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
