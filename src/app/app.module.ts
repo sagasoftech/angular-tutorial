@@ -38,11 +38,14 @@ import { RoutingServersService } from './routing/routing-servers/routing-servers
 
 const appRoutes: Routes = [
   {path: '', component: RoutingHomeComponent},
-  {path: 'users', component: RoutingUsersComponent},
-  {path: 'users/:id/:name', component: RoutingUserComponent},
-  {path: 'servers', component: RoutingServersComponent},
-  {path: 'servers/:id', component: RoutingServerComponent},
-  {path: 'servers/:id/edit', component: RoutingEditServerComponent}
+  {path: 'users', component: RoutingUsersComponent, children: [
+    {path: ':id/:name', component: RoutingUserComponent}
+  ]},
+  {path: 'servers', component: RoutingServersComponent, children: [
+    {path: ':id', component: RoutingServerComponent},
+    {path: ':id/edit', component: RoutingEditServerComponent}
+  ]},
+
 ]
 
 @NgModule({
