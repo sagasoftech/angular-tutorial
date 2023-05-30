@@ -38,6 +38,7 @@ import { AuthService } from './auth-service';
 import { AuthGuard } from './auth-guard';
 import { CanDeactivateGuard } from './routing/routing-servers/routing-edit-server/can-deactivate-guard.service';
 import { ErrorPageComponent } from './routing/error-page/error-page.component';
+import { ServerResolver } from './routing/routing-servers/routing-server/server-resolver.service';
 
 //import { LoggingService } from './logging.service';
 
@@ -80,7 +81,7 @@ import { ErrorPageComponent } from './routing/error-page/error-page.component';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [RoutingServersService, AuthService, AuthGuard, CanDeactivateGuard],
+  providers: [RoutingServersService, AuthService, AuthGuard, CanDeactivateGuard, ServerResolver],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
