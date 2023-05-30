@@ -34,6 +34,8 @@ import { RoutingServerComponent } from './routing/routing-servers/routing-server
 import { RoutingServersService } from './routing/routing-servers/routing-servers.service';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AppRoutingModule } from './app-routing.module';
+import { AuthService } from './auth-service';
+import { AuthGuard } from './auth-guard';
 
 //import { LoggingService } from './logging.service';
 
@@ -75,7 +77,7 @@ import { AppRoutingModule } from './app-routing.module';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [RoutingServersService],
+  providers: [RoutingServersService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
