@@ -16,6 +16,7 @@ export class RoutingEditServerComponent implements OnInit, CanComponentDeactivat
   serverStatus = '';
   allowEdit = false;
   changesSaved = false;
+  serverId: number;
 
   constructor(private serversService: RoutingServersService,
               private route: ActivatedRoute,
@@ -32,8 +33,16 @@ export class RoutingEditServerComponent implements OnInit, CanComponentDeactivat
         }
       );
     this.route.fragment.subscribe();
+    this.serverId = this.route.snapshot.params['id'];
+    this.server = this.serversService.getServer(+this.serverId);
 
-    this.server = this.serversService.getServer(1);
+    this.route.params  
+    .subscribe(
+      (params: Params) => {
+        this.serverId = +params['id'];
+      }
+    );
+
     this.serverName = this.server.name;
     this.serverStatus = this.server.status;
   }
