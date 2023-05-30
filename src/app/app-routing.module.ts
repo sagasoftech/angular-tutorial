@@ -9,6 +9,7 @@ import { RoutingUserComponent } from "./routing/routing-users/routing-user/routi
 import { RoutingUsersComponent } from "./routing/routing-users/routing-users.component";
 import { RoutingHomeComponent } from "./routing/routing-home/routing-home.component";
 import { AuthGuard } from "./auth-guard";
+import { CanDeactivateGuard } from "./routing/routing-servers/routing-edit-server/can-deactivate-guard.service";
 
 const appRoutes: Routes = [
   { path: '', component: RoutingHomeComponent },
@@ -20,7 +21,7 @@ const appRoutes: Routes = [
   {
     path: 'servers', canActivateChild: [AuthGuard], component: RoutingServersComponent, children: [
       { path: ':id', component: RoutingServerComponent },
-      { path: ':id/edit', component: RoutingEditServerComponent }
+      { path: ':id/edit', component: RoutingEditServerComponent, canDeactivate: [CanDeactivateGuard] }
     ]
   },
   { path: 'not-found', component: PageNotFoundComponent },
