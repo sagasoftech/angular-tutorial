@@ -10,6 +10,7 @@ import { RoutingUsersComponent } from "./routing/routing-users/routing-users.com
 import { RoutingHomeComponent } from "./routing/routing-home/routing-home.component";
 import { AuthGuard } from "./auth-guard";
 import { CanDeactivateGuard } from "./routing/routing-servers/routing-edit-server/can-deactivate-guard.service";
+import { ErrorPageComponent } from "./routing/error-page/error-page.component";
 
 const appRoutes: Routes = [
   { path: '', component: RoutingHomeComponent },
@@ -24,7 +25,8 @@ const appRoutes: Routes = [
       { path: ':id/edit', component: RoutingEditServerComponent, canDeactivate: [CanDeactivateGuard] }
     ]
   },
-  { path: 'not-found', component: PageNotFoundComponent },
+  //{ path: 'not-found', component: PageNotFoundComponent },
+  { path: 'not-found', component: ErrorPageComponent, data: {message: 'Page not found!'} },
   { path: '**', redirectTo: '/not-found' }
 ]
 
